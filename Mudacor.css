@@ -35,6 +35,7 @@ div {
 .tabela {
     background-color: #d5e4cf;
     border: 3px solid #2a836b;
+    border-collapse: collapse;
 }
 td {
     text-align: center  ;
