@@ -29,3 +29,11 @@ div {
     right: 0;
     width: 250px;
 }
+.tabela {
+    background-color: #d5e4cf;
+    border: 3px solid #2a836b;
+}
+td {
+    text-align: center  ;
+    border: 1px solid #2a836b;
+}
