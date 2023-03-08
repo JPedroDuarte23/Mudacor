@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./CSSexterno.css" type="text/css" rel="stylesheet"> 
+    <title>Document</title>
+</head>
+<body>
+<div id="div_caixa">
+    <div class="card">
+
+        <div class="avatar"></div>
+
+        <h2>Meu nome é: <span class="textcolor">Brian.</span> </h2>
+        <p>Mensagem: <span class="textcolor">Droga, sou eu!</span> </p>
+    
+    </div>
+    
+    <div class="card">
+
+    <div class="avatar"></div>
+
+    <h2>Meu nome é: <span class="textcolor">Maria</span> </h2>
+    <p>Mensagem: <span class="textcolor">Maria maria!</span> </p>
+
+    </div>
+
+    <div id="div_card" class="card">
+
+        <div id="div_avatar"class="avatar"></div>
+    
+        <h2>Meu nome é: <span class="textcolor">James</span> </h2>
+        <p>Mensagem: <span class="textcolor">AU AU!</span> </p>
+     
+    </div>
+    <div class="estilizacao">
+    COR avatar: <input id="input_cor"><br>
+    COR fundo: <input id="input_fundo"><br>
+    COR letras/borda <input id="input_letra_borda"><br>
+    <button onclick="change()">Trocar cores</button>
+    <button onclick="change2()">Trocar cores 2</button>
+    <button onclick="back()">Voltar cores</button>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    function change() {
+        var cor = input_cor.value
+        var background = input_fundo.value
+        var bordaeletra = input_letra_borda.value
+        div_caixa.innerHTML += `
+        <style>
+            .avatar {
+                background-color: ${cor};
+                
+            }
+            .card {
+                background-color: ${background};
+                border: 3px solid ${bordaeletra};
+            }
+            .textcolor {
+                color: ${bordaeletra};
+            }
+
+        </style>`
+    }
+    function change2() {
+        div_caixa.innerHTML += `
+        <style>
+            .avatar {
+                background-color: blue;
+                
+            }
+            .card {
+                background-color: lightblue;
+                border: 3px solid darkblue;
+            }
+            .textcolor {
+                color: darkblue;
+            }
+
+        </style>`
+    }
+    function back() {
+        div_caixa.innerHTML += `
+        <style>
+            .avatar {
+                background-color: #025043;
+                
+            }
+            .card {
+                background-color: #d5e4cf;
+                border: 3px solid #2a836b;
+            }
+            .textcolor {
+                color: #025043;
+            }
+
+        </style>`
+    }
+</script>
+
