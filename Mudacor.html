@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./Mudacor.css" type="text/css" rel="stylesheet"> 
+    <link href="./CSSexterno.css" type="text/css" rel="stylesheet"> 
     <title>Document</title>
 </head>
 <body>
@@ -36,35 +36,63 @@
      
     </div>
     <div class="estilizacao">
-    COR avatar: <input id="input_cor"><br>
-    COR fundo: <input id="input_fundo"><br>
-    COR letras/borda <input id="input_letra_borda"><br>
-    <button onclick="change()">Trocar cores</button>
-    <button onclick="change2()">Trocar cores 2</button>
-    <button onclick="back()">Voltar cores</button>
+        <table class="tabela">
+            <tr>
+                <td>COR avatar:</td> 
+                <td><input id="input_avatar" type="color"></td>
+            </tr>
+            <tr>
+                <td>COR fundo:</td> 
+                <td><input id="input_fundo" type="color"></td>
+            </tr>
+            <tr>
+                <td>COR letras:</td> 
+                <td><input id="input_letra"type="color"></td>
+            </tr>
+            <tr>
+                <td>COR borda:</td> 
+                <td><input id="input_borda" type="color"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button onclick="change()">Trocar cores</button>
+                    <button onclick="change2()">Trocar cores 2</button>
+                    <button onclick="back()">Voltar cores</button>
+                </td>
+            </tr> 
+        </table>
     </div>
 </div>
 </body>
 </html>
 <script>
     function change() {
-        var cor = input_cor.value
+        var avatar = input_avatar.value
         var background = input_fundo.value
-        var bordaeletra = input_letra_borda.value
+        var letter = input_letra.value
+        var border = input_borda.value
         div_caixa.innerHTML += `
         <style>
             .avatar {
-                background-color: ${cor};
+                background-color: ${avatar};
                 
             }
             .card {
                 background-color: ${background};
-                border: 3px solid ${bordaeletra};
+                border: 3px solid ${border};
             }
             .textcolor {
-                color: ${bordaeletra};
+                color: ${letter};
             }
-
+            .tabela {
+                background-color: ${background};
+                border: 3px solid ${border};
+            }
+            td {
+                text-align: center  ;
+                border: 1px solid ${border};
+            }
         </style>`
     }
     function change2() {
@@ -81,7 +109,14 @@
             .textcolor {
                 color: darkblue;
             }
-
+            .tabela {
+                background-color: lightblue;
+                border: 3px solid darkblue;
+            }
+            td {
+                text-align: center  ;
+                border: 1px solid darkblue;
+            }
         </style>`
     }
     function back() {
@@ -98,7 +133,14 @@
             .textcolor {
                 color: #025043;
             }
-
+            .tabela {
+                background-color: #d5e4cf;
+                border: 3px solid #2a836b;
+            }
+            td {
+                text-align: center  ;
+                border: 1px solid #2a836b;
+            }
         </style>`
     }
 </script>
